@@ -19,7 +19,7 @@
 
 ## 三步开始
 
-1. **装上这个 Skill。** 四种装法见 [INSTALL.md](INSTALL.md)。不想装 Skill 的话，直接复制 [PROMPT.md](PROMPT.md) 里的提示词也行。
+1. **装上这个 Skill。** 四种装法见 [INSTALL.md](INSTALL.md)。不想装 Skill 的话，直接复制 [PROMPT.md](PROMPT.md) 里的提示词也行。小红书帖子用的短版提示词见 [PROMPT_XHS.md](PROMPT_XHS.md)。
 2. **对助手说：** 「帮我把这趟旅行做成 3D 纸雕路书。」
 3. **回答助手的问题，**确认它整理出的行程和地图方位，最后看预览，说哪里要改。
 

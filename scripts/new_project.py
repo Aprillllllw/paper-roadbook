@@ -27,21 +27,52 @@ def placeholder_trip(scene):
     routes = scene.get("routes") or {}
 
     def dist_to_route(pt, pts):
-        best, at = 1e18, 0
-        for i, q in enumerate(pts):
-            d = math.hypot(pt[0] - q[0], pt[1] - q[1])
+        """返回 (点到折线的最短距离, 折线上最近的位置，用来排先后)。位置 = 段序号 + 段内比例。"""
+        if len(pts) == 1:
+            return math.hypot(pt[0] - pts[0][0], pt[1] - pts[0][1]), 0.0
+        best, at = 1e18, 0.0
+        for i in range(len(pts) - 1):
+            a, b = pts[i], pts[i + 1]
+            dx, dy = b[0] - a[0], b[1] - a[1]
+            L = dx * dx + dy * dy
+            t = 0.0 if L < 1e-9 else max(0.0, min(1.0, ((pt[0] - a[0]) * dx + (pt[1] - a[1]) * dy) / L))
+            d = math.hypot(pt[0] - (a[0] + t * dx), pt[1] - (a[1] + t * dy))
             if d < best:
-                best, at = d, i
+                best, at = d, i + t
         return best, at
 
     keys = list(routes.keys()) or ["D1"]
+    # 阈值：按整张图的大小算。离某天路线的起点或终点在 NEAR 以内，就算这一天的站
+    # （这样「D1 终点 = D2 起点」的站两天都会出现）；离路线本身在 NEAR/2 以内也算。
+    allpts = list(stops.values()) + [q for r in routes.values() for q in r]
+    if allpts:
+        xs = [p[0] for p in allpts]
+        zs = [p[1] for p in allpts]
+        diag = math.hypot(max(xs) - min(xs), max(zs) - min(zs))
+    else:
+        diag = 0.0
+    NEAR = max(5.0, diag * 0.06)
     assigned = {k: [] for k in keys}
     for sid, pt in stops.items():
-        if routes:
-            k = min(keys, key=lambda r: dist_to_route(pt, routes[r])[0] if routes[r] else 1e18)
-            assigned[k].append((dist_to_route(pt, routes[k])[1] if routes[k] else 0, sid))
-        else:
-            assigned["D1"].append((0, sid))
+        if not routes:
+            assigned["D1"].append((0.0, sid))
+            continue
+        hit = False
+        for k in keys:
+            pts = routes[k]
+            if not pts:
+                continue
+            d_line, pos = dist_to_route(pt, pts)
+            d_end = min(math.hypot(pt[0] - pts[0][0], pt[1] - pts[0][1]),
+                        math.hypot(pt[0] - pts[-1][0], pt[1] - pts[-1][1]))
+            if d_end <= NEAR or d_line <= NEAR / 2:
+                assigned[k].append((pos, sid))
+                hit = True
+        if not hit:  # 谁都不近：仍然给最近的一天，保证每个站都出现
+            cand = [k for k in keys if routes[k]]
+            if cand:
+                k = min(cand, key=lambda r: dist_to_route(pt, routes[r])[0])
+                assigned[k].append((dist_to_route(pt, routes[k])[1], sid))
     days = []
     for n, k in enumerate(keys, 1):
         ids = [sid for _, sid in sorted(assigned[k])]

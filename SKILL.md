@@ -2,7 +2,7 @@
 name: paper-roadbook
 description: 帮用户把自己的一趟旅行做成「3D 纸雕路书」交互网页：一块可旋转的微缩纸雕地图，上面有山、湖、路线和纸模型小物件，点每个站点能看自己的照片、视频和笔记。当用户提到路书、旅行地图、3D 地图、行程地图、纸雕地图、travel map、roadbook、3D itinerary、把旅行做成网页时使用。全程不需要任何付费 API 或 3D 软件，只需要 Node 20.19+ 或 22.12+、Python 3.9+、ffmpeg。
 metadata:
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # paper-roadbook：3D 纸雕路书

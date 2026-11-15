@@ -1138,7 +1138,7 @@ def build_scene(geo, terr, osm, stops, days, routes_real, view_from, args, notes
                         moved_p = True
                 if not moved_p:
                     break
-            label = p["name"] or "%d m peak" % round(p["elev"])
+            label = p["name"] or "无名峰 %d 米" % round(p["elev"])
             if bp[1] > 8:
                 H *= 0.55
                 notes.append("山峰「%s」落在前排，已压低到 H≈%.0f 免得挡住站点；构图时可考虑换到后排或删掉。" % (label, H))
@@ -1592,8 +1592,11 @@ def write_card(path, a):
     A("## 水")
     A("")
     status = a["osm_status"]
-    water_failed = str(status.get("lakes", "")).startswith(("failed", "skipped")) and str(status.get("rivers", "")).startswith(("failed", "skipped"))
-    if water_failed:
+    def _failed(key):
+        # 没查到（失败或被跳过）和「查了但是空」是两回事，分开说
+        return str(status.get(key, "")).startswith(("failed", "skipped"))
+    lakes_failed, rivers_failed = _failed("lakes"), _failed("rivers")
+    if lakes_failed and rivers_failed:
         A("**水系数据这次没取到**（公共地图服务暂时连不上，或被设为跳过）。下面没有湖泊和河流；可以稍后重跑一次，或者直接告诉我行程里有哪些湖和河、大概在哪。")
     else:
         if a["lakes"]:
@@ -1603,11 +1606,15 @@ def write_card(path, a):
                     where += "；" + ("就在站点「%s」那里" % l["near_stop"] if l["km_stop"] < 3 else "离站点「%s」最近，在它的%s %d 公里" % (
                         l["near_stop"], ZH[l["dir_stop"]], round(l["km_stop"])))
                 A("- 湖：**%s**，%s，长约 %d 公里。" % (l["name"] or "（无名湖）", where, round(l["major_km"])))
+        elif lakes_failed:
+            A("- 湖泊数据这次没取到，不代表这里没有湖。可以稍后重跑，或者直接告诉我。")
         else:
             A("- 范围内没有找到大湖。")
         if a["rivers"]:
             for r in a["rivers"]:
                 A("- 河：**%s**，长约 %d 公里（范围内），总体向%s流。" % (r["name"] or "（无名河）", round(r["length_km"]), ZH[r["flow_dir"]]))
+        elif rivers_failed:
+            A("- 河流数据这次没取到，不代表这里没有河。可以稍后重跑，或者直接告诉我。")
         else:
             A("- 范围内没有找到主要河流。")
     if a["coast"]:

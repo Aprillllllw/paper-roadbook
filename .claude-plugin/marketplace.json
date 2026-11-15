@@ -4,14 +4,14 @@
   "owner": { "name": "paper-roadbook contributors" },
   "metadata": {
     "description": "paper-roadbook：3D 纸雕路书 Skill 的 plugin marketplace。",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "paper-roadbook",
       "source": "./",
       "description": "把你的旅行做成可旋转的 3D 纸雕路书网页。",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "license": "MIT",
       "category": "productivity",
       "keywords": ["travel", "roadbook", "3d-map", "路书"]
