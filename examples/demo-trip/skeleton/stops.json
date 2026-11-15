@@ -1,0 +1,80 @@
+{
+ "stops": [
+  {
+   "id": "airport",
+   "name": "伊宁机场",
+   "lat": 43.955855,
+   "lon": 81.3277333
+  },
+  {
+   "id": "guozigou",
+   "name": "果子沟大桥",
+   "lat": 44.4703201,
+   "lon": 81.1403243
+  },
+  {
+   "id": "sayram",
+   "name": "赛里木湖",
+   "lat": 44.608256,
+   "lon": 81.180576
+  },
+  {
+   "id": "yining",
+   "name": "伊宁市",
+   "lat": 43.9052027,
+   "lon": 81.2747797
+  },
+  {
+   "id": "zhaosu",
+   "name": "昭苏县",
+   "lat": 43.152726,
+   "lon": 81.1271033
+  },
+  {
+   "id": "tekes",
+   "name": "特克斯县",
+   "lat": 43.216904,
+   "lon": 81.833002
+  },
+  {
+   "id": "qiapuqihai",
+   "name": "恰普其海水库",
+   "lat": 43.32,
+   "lon": 82.45
+  },
+  {
+   "id": "kuerdening",
+   "name": "库尔德宁",
+   "lat": 43.2766223,
+   "lon": 82.6768534
+  }
+ ],
+ "days": [
+  {
+   "id": "D1",
+   "stops": [
+    "airport",
+    "yining",
+    "guozigou",
+    "sayram"
+   ]
+  },
+  {
+   "id": "D2",
+   "stops": [
+    "sayram",
+    "yining",
+    "tekes",
+    "zhaosu"
+   ]
+  },
+  {
+   "id": "D3",
+   "stops": [
+    "zhaosu",
+    "qiapuqihai",
+    "kuerdening"
+   ]
+  }
+ ]
+}

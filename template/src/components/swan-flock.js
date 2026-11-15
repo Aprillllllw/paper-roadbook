@@ -1,0 +1,2 @@
+import {T,finish} from './paperkit.js';import {makeSwan} from './swan.js';
+export function makeSwanFlock(n=6){const group=new T.Group(),birds=Array.from({length:n},(_,i)=>{const bird=makeSwan();group.add(bird.group);return {bird,phase:i*2.399,r:.5+(i%5)*.175};});const update=(t,dt)=>birds.forEach(({bird,phase,r})=>{const a=t*.08+phase;bird.update(t+phase,dt);bird.group.position.x=Math.cos(a)*r;bird.group.position.z=Math.sin(a)*r;bird.group.rotation.y=-a-Math.PI/2;});update(0,0);return finish(group,update);}

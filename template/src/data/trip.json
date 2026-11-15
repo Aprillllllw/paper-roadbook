@@ -1,0 +1,181 @@
+{
+  "title": "伊犁河谷五日路书",
+  "subtitle": "公开地理构图示例，请替换为你的真实行程",
+  "author": {
+    "name": "你的名字",
+    "line": "在这里写旅行简介"
+  },
+  "lang": "zh",
+  "days": [
+    {
+      "id": "D1",
+      "label": "Day 1",
+      "title": "伊宁机场 → 果子沟 → 赛里木湖",
+      "drive": "在这里写驾驶时间",
+      "route": "D1",
+      "stops": [
+        "airport",
+        "guozigou",
+        "sayram"
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "Day 2",
+      "title": "赛里木湖 → 伊宁",
+      "drive": "在这里写驾驶时间",
+      "route": "D2",
+      "stops": [
+        "sayram",
+        "yining"
+      ]
+    },
+    {
+      "id": "D3",
+      "label": "Day 3",
+      "title": "伊宁 → 昭苏 → 特克斯",
+      "drive": "在这里写驾驶时间",
+      "route": "D3",
+      "stops": [
+        "yining",
+        "zhaosu",
+        "tekes"
+      ]
+    },
+    {
+      "id": "D4",
+      "label": "Day 4",
+      "title": "特克斯 → 库尔德宁",
+      "drive": "在这里写驾驶时间",
+      "route": "D4",
+      "stops": [
+        "tekes",
+        "kuerdening"
+      ]
+    },
+    {
+      "id": "D5",
+      "label": "Day 5",
+      "title": "库尔德宁 → 伊宁机场",
+      "drive": "在这里写驾驶时间",
+      "route": "D5",
+      "stops": [
+        "kuerdening",
+        "airport"
+      ]
+    }
+  ],
+  "stops": {
+    "airport": {
+      "name": "伊宁机场",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "yining": {
+      "name": "伊宁",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "d1-road": {
+      "name": "伊犁河谷沿途",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "guozigou": {
+      "name": "果子沟",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "sayram": {
+      "name": "赛里木湖",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "zhaosu": {
+      "name": "昭苏",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "yuhu": {
+      "name": "玉湖",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "tekes": {
+      "name": "特克斯",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "qiapuqi": {
+      "name": "恰甫其海",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    },
+    "kuerdening": {
+      "name": "库尔德宁",
+      "zh": "",
+      "kind": "sight",
+      "media": [],
+      "info": {
+        "行程笔记": "在这里写你的游览或住宿体验"
+      },
+      "extra": null
+    }
+  },
+  "facts": [
+    {
+      "label": "天数",
+      "value": "5 天示例"
+    },
+    {
+      "label": "地区",
+      "value": "新疆伊犁河谷及周边"
+    }
+  ],
+  "disclaimer": "方位真实，距离已压缩，比例不按真实。"
+}

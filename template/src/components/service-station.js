@@ -1,0 +1,2 @@
+import {T,C,house,box,finish} from './paperkit.js';
+export function makeServiceStation(){const group=new T.Group();const h=house(group,-.08,0,.55,.38,.42);for(const o of h.children)if(o.isMesh&&o.material.color.getHexString()===C.brown.slice(1).toLowerCase()&&o.position.y>.38)o.material.color.set(C.red);box(group,[.035,.54,.035],[.36,.27,.13],C.brown);box(group,[.20,.14,.035],[.36,.48,.13],C.cream);box(group,[.09,.055,.04],[.36,.48,.155],C.red);return finish(group);}

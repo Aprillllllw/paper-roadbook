@@ -1,0 +1,670 @@
+{
+ "version": 1,
+ "tool": "geo_scan.py",
+ "bbox": [
+  80.5,
+  42.4,
+  83.4,
+  44.9
+ ],
+ "size_km": [
+  234,
+  277
+ ],
+ "zoom": 8,
+ "elevation": {
+  "min": 189,
+  "max": 4730,
+  "p10": 604,
+  "p50": 1743,
+  "p98": 3872,
+  "relief": 3268,
+  "flat": false,
+  "sea_fraction": 0.0
+ },
+ "terrain": {
+  "summary": "北、南侧是高山，西、东侧是向外敞开的低地或谷口。最高处约 4730 米，八成陆地在 604–3355 米之间。",
+  "sides": {
+   "N": {
+    "e": 0.296,
+    "high": 0.302,
+    "sea": 0.0,
+    "mid_e": 0.278,
+    "corner_e": 0.305,
+    "kind": "wall"
+   },
+   "S": {
+    "e": 0.633,
+    "high": 0.683,
+    "sea": 0.0,
+    "mid_e": 0.611,
+    "corner_e": 0.644,
+    "kind": "wall"
+   },
+   "W": {
+    "e": 0.394,
+    "high": 0.396,
+    "sea": 0.0,
+    "mid_e": 0.214,
+    "corner_e": 0.484,
+    "kind": "opening"
+   },
+   "E": {
+    "e": 0.41,
+    "high": 0.423,
+    "sea": 0.0,
+    "mid_e": 0.301,
+    "corner_e": 0.465,
+    "kind": "opening"
+   }
+  },
+  "cells": {
+   "NW": {
+    "e": 0.407,
+    "high": 0.438,
+    "sea": 0.0,
+    "zmax": 4141.444,
+    "zmean": 1934.575
+   },
+   "N": {
+    "e": 0.278,
+    "high": 0.249,
+    "sea": 0.0,
+    "zmax": 3458.5,
+    "zmean": 1471.249
+   },
+   "NE": {
+    "e": 0.202,
+    "high": 0.218,
+    "sea": 0.0,
+    "zmax": 3967.333,
+    "zmean": 1096.853
+   },
+   "W": {
+    "e": 0.214,
+    "high": 0.222,
+    "sea": 0.0,
+    "zmax": 3490.75,
+    "zmean": 1295.863
+   },
+   "C": {
+    "e": 0.196,
+    "high": 0.093,
+    "sea": 0.0,
+    "zmax": 3097.167,
+    "zmean": 1245.487
+   },
+   "E": {
+    "e": 0.301,
+    "high": 0.19,
+    "sea": 0.0,
+    "zmax": 3847.0,
+    "zmean": 1588.28
+   },
+   "SW": {
+    "e": 0.561,
+    "high": 0.528,
+    "sea": 0.0,
+    "zmax": 4730.0,
+    "zmean": 2436.569
+   },
+   "S": {
+    "e": 0.611,
+    "high": 0.66,
+    "sea": 0.0,
+    "zmax": 4686.833,
+    "zmean": 2600.923
+   },
+   "SE": {
+    "e": 0.727,
+    "high": 0.861,
+    "sea": 0.0,
+    "zmax": 4421.0,
+    "zmean": 2979.417
+   }
+  }
+ },
+ "viewFrom": {
+  "value": "W",
+  "forced": false,
+  "reason": "自动选择从「西」方向看进来。「西」侧是向外敞开的谷口或低地，朝向观众；「东」侧山地较高，排在后排当背景墙。",
+  "scores": {
+   "N": 0.354,
+   "NE": 0.253,
+   "E": 0.202,
+   "SE": -0.254,
+   "S": -0.354,
+   "SW": -0.253,
+   "W": 0.458,
+   "NW": 0.254
+  }
+ },
+ "stops": [
+  {
+   "id": "airport",
+   "name": "伊宁机场",
+   "lat": 43.95585,
+   "lon": 81.32773,
+   "elev_m": 673,
+   "geocoded": true,
+   "rel_dir": "NW",
+   "rel_km": 60
+  },
+  {
+   "id": "guozigou",
+   "name": "果子沟大桥",
+   "lat": 44.47032,
+   "lon": 81.14032,
+   "elev_m": 1831,
+   "geocoded": true,
+   "rel_dir": "NW",
+   "rel_km": 112
+  },
+  {
+   "id": "sayram",
+   "name": "赛里木湖",
+   "lat": 44.60826,
+   "lon": 81.18058,
+   "elev_m": 2072,
+   "geocoded": true,
+   "rel_dir": "NW",
+   "rel_km": 123
+  },
+  {
+   "id": "yining",
+   "name": "伊宁市",
+   "lat": 43.9052,
+   "lon": 81.27478,
+   "elev_m": 626,
+   "geocoded": true,
+   "rel_dir": "NW",
+   "rel_km": 61
+  },
+  {
+   "id": "zhaosu",
+   "name": "昭苏县",
+   "lat": 43.15273,
+   "lon": 81.1271,
+   "elev_m": 1875,
+   "geocoded": true,
+   "rel_dir": "SW",
+   "rel_km": 86
+  },
+  {
+   "id": "tekes",
+   "name": "特克斯县",
+   "lat": 43.2169,
+   "lon": 81.833,
+   "elev_m": 1208,
+   "geocoded": true,
+   "rel_dir": "S",
+   "rel_km": 49
+  },
+  {
+   "id": "qiapuqihai",
+   "name": "恰普其海水库",
+   "lat": 43.32,
+   "lon": 82.45,
+   "elev_m": 1343,
+   "geocoded": false,
+   "rel_dir": "SE",
+   "rel_km": 54
+  },
+  {
+   "id": "kuerdening",
+   "name": "库尔德宁",
+   "lat": 43.27662,
+   "lon": 82.67685,
+   "elev_m": 1078,
+   "geocoded": true,
+   "rel_dir": "SE",
+   "rel_km": 72
+  }
+ ],
+ "stop_pairs": [
+  {
+   "from": "airport",
+   "to": "guozigou",
+   "bearing_deg": 345,
+   "dir": "N",
+   "km": 59.1
+  },
+  {
+   "from": "airport",
+   "to": "sayram",
+   "bearing_deg": 351,
+   "dir": "N",
+   "km": 73.5
+  },
+  {
+   "from": "airport",
+   "to": "yining",
+   "bearing_deg": 217,
+   "dir": "SW",
+   "km": 7.1
+  },
+  {
+   "from": "airport",
+   "to": "zhaosu",
+   "bearing_deg": 190,
+   "dir": "S",
+   "km": 90.8
+  },
+  {
+   "from": "airport",
+   "to": "tekes",
+   "bearing_deg": 154,
+   "dir": "SE",
+   "km": 91.7
+  },
+  {
+   "from": "airport",
+   "to": "qiapuqihai",
+   "bearing_deg": 128,
+   "dir": "SE",
+   "km": 114.7
+  },
+  {
+   "from": "airport",
+   "to": "kuerdening",
+   "bearing_deg": 125,
+   "dir": "SE",
+   "km": 132.3
+  },
+  {
+   "from": "guozigou",
+   "to": "sayram",
+   "bearing_deg": 12,
+   "dir": "N",
+   "km": 15.7
+  },
+  {
+   "from": "guozigou",
+   "to": "yining",
+   "bearing_deg": 170,
+   "dir": "S",
+   "km": 63.7
+  },
+  {
+   "from": "guozigou",
+   "to": "zhaosu",
+   "bearing_deg": 180,
+   "dir": "S",
+   "km": 146.5
+  },
+  {
+   "from": "guozigou",
+   "to": "tekes",
+   "bearing_deg": 158,
+   "dir": "S",
+   "km": 150.0
+  },
+  {
+   "from": "guozigou",
+   "to": "qiapuqihai",
+   "bearing_deg": 140,
+   "dir": "SE",
+   "km": 165.4
+  },
+  {
+   "from": "guozigou",
+   "to": "kuerdening",
+   "bearing_deg": 137,
+   "dir": "SE",
+   "km": 181.1
+  },
+  {
+   "from": "sayram",
+   "to": "yining",
+   "bearing_deg": 174,
+   "dir": "S",
+   "km": 78.5
+  },
+  {
+   "from": "sayram",
+   "to": "zhaosu",
+   "bearing_deg": 182,
+   "dir": "S",
+   "km": 161.9
+  },
+  {
+   "from": "sayram",
+   "to": "tekes",
+   "bearing_deg": 161,
+   "dir": "S",
+   "km": 163.3
+  },
+  {
+   "from": "sayram",
+   "to": "qiapuqihai",
+   "bearing_deg": 144,
+   "dir": "SE",
+   "km": 175.6
+  },
+  {
+   "from": "sayram",
+   "to": "kuerdening",
+   "bearing_deg": 141,
+   "dir": "SE",
+   "km": 190.5
+  },
+  {
+   "from": "yining",
+   "to": "zhaosu",
+   "bearing_deg": 188,
+   "dir": "S",
+   "km": 84.5
+  },
+  {
+   "from": "yining",
+   "to": "tekes",
+   "bearing_deg": 149,
+   "dir": "SE",
+   "km": 88.8
+  },
+  {
+   "from": "yining",
+   "to": "qiapuqihai",
+   "bearing_deg": 124,
+   "dir": "SE",
+   "km": 114.8
+  },
+  {
+   "from": "yining",
+   "to": "kuerdening",
+   "bearing_deg": 122,
+   "dir": "SE",
+   "km": 132.8
+  },
+  {
+   "from": "zhaosu",
+   "to": "tekes",
+   "bearing_deg": 83,
+   "dir": "E",
+   "km": 57.7
+  },
+  {
+   "from": "zhaosu",
+   "to": "qiapuqihai",
+   "bearing_deg": 80,
+   "dir": "E",
+   "km": 108.8
+  },
+  {
+   "from": "zhaosu",
+   "to": "kuerdening",
+   "bearing_deg": 84,
+   "dir": "E",
+   "km": 126.3
+  },
+  {
+   "from": "tekes",
+   "to": "qiapuqihai",
+   "bearing_deg": 77,
+   "dir": "E",
+   "km": 51.3
+  },
+  {
+   "from": "tekes",
+   "to": "kuerdening",
+   "bearing_deg": 84,
+   "dir": "E",
+   "km": 68.7
+  },
+  {
+   "from": "qiapuqihai",
+   "to": "kuerdening",
+   "bearing_deg": 105,
+   "dir": "E",
+   "km": 19.0
+  }
+ ],
+ "peaks": [
+  {
+   "name": "",
+   "elev": 4553,
+   "lat": 42.426,
+   "lon": 80.9981,
+   "dir": "SW",
+   "km": 155.55185976483452,
+   "e": 1.15
+  },
+  {
+   "name": "",
+   "elev": 4466,
+   "lat": 42.4045,
+   "lon": 81.7682,
+   "dir": "S",
+   "km": 138.4927218281756,
+   "e": 1.15
+  },
+  {
+   "name": "",
+   "elev": 4184,
+   "lat": 42.4152,
+   "lon": 82.1314,
+   "dir": "S",
+   "km": 137.30837806568672,
+   "e": 1.1
+  },
+  {
+   "name": "",
+   "elev": 4111,
+   "lat": 42.6082,
+   "lon": 82.916,
+   "dir": "SE",
+   "km": 139.0111905394751,
+   "e": 1.07
+  },
+  {
+   "name": "",
+   "elev": 4018,
+   "lat": 42.8005,
+   "lon": 82.3929,
+   "dir": "S",
+   "km": 100.4763694588576,
+   "e": 1.04
+  },
+  {
+   "name": "",
+   "elev": 4005,
+   "lat": 42.5653,
+   "lon": 83.3519,
+   "dir": "SE",
+   "km": 164.72280251510455,
+   "e": 1.04
+  },
+  {
+   "name": "",
+   "elev": 3975,
+   "lat": 42.4045,
+   "lon": 80.5041,
+   "dir": "SW",
+   "km": 180.35999371968677,
+   "e": 1.03
+  },
+  {
+   "name": "",
+   "elev": 3884,
+   "lat": 44.7014,
+   "lon": 80.7947,
+   "dir": "NW",
+   "km": 148.91096807235132,
+   "e": 1.0
+  }
+ ],
+ "ranges": [
+  {
+   "name": "s-range-1",
+   "dir": "S",
+   "axis": "东西",
+   "relative_height": 1.0,
+   "peaks": [
+    "3571m",
+    "4005m",
+    "3605m",
+    "3336m",
+    "4111m",
+    "3735m",
+    "3972m",
+    "4018m",
+    "3514m",
+    "4184m",
+    "3898m",
+    "4466m",
+    "3727m",
+    "4136m",
+    "4553m",
+    "3402m",
+    "3975m"
+   ]
+  },
+  {
+   "name": "nw-range-2",
+   "dir": "NW",
+   "axis": "南北",
+   "relative_height": 0.97,
+   "peaks": [
+    "3724m",
+    "3884m",
+    "3727m"
+   ]
+  },
+  {
+   "name": "e-range-3",
+   "dir": "E",
+   "axis": "东西",
+   "relative_height": 0.91,
+   "peaks": [
+    "3767m",
+    "3540m",
+    "3414m"
+   ]
+  }
+ ],
+ "lakes": [
+  {
+   "name": "艾比湖",
+   "id": "lake-1",
+   "center_ll": [
+    82.9678,
+    44.8311
+   ],
+   "dir_center": "NE",
+   "major_km": 33.0,
+   "area_km2": 577,
+   "near_stop": "赛里木湖",
+   "dir_stop": "E",
+   "km_stop": 146.0460970181849
+  },
+  {
+   "name": "赛里木湖",
+   "id": "lake-2",
+   "center_ll": [
+    81.1811,
+    44.6083
+   ],
+   "dir_center": "NW",
+   "major_km": 30.8,
+   "area_km2": 545,
+   "near_stop": "赛里木湖",
+   "dir_stop": "E",
+   "km_stop": 0.043127433626368394
+  }
+ ],
+ "rivers": [
+  {
+   "name": "特克斯河",
+   "id": "river-1",
+   "length_km": 260,
+   "flow_dir": "NE"
+  },
+  {
+   "name": "伊犁河",
+   "id": "river-2",
+   "length_km": 218,
+   "flow_dir": "W"
+  },
+  {
+   "name": "喀什河",
+   "id": "river-3",
+   "length_km": 88,
+   "flow_dir": "W"
+  }
+ ],
+ "coast": {
+  "scene": null,
+  "sea_sides_real": [],
+  "sea_fraction": 0.0
+ },
+ "routes": {
+  "status": "ok",
+  "legs": {
+   "D1": [
+    [
+     "airport",
+     "yining",
+     true
+    ],
+    [
+     "yining",
+     "guozigou",
+     true
+    ],
+    [
+     "guozigou",
+     "sayram",
+     true
+    ]
+   ],
+   "D2": [
+    [
+     "sayram",
+     "yining",
+     true
+    ],
+    [
+     "yining",
+     "tekes",
+     true
+    ],
+    [
+     "tekes",
+     "zhaosu",
+     true
+    ]
+   ],
+   "D3": [
+    [
+     "zhaosu",
+     "qiapuqihai",
+     true
+    ],
+    [
+     "qiapuqihai",
+     "kuerdening",
+     true
+    ]
+   ]
+  }
+ },
+ "compression": {
+  "scale_km_to_unit": 0.3622,
+  "max_pair_bearing_error_deg": 28.7,
+  "note": "方位真实，距离已压缩，比例不按真实"
+ },
+ "osm_status": {
+  "lakes": "ok (119 candidates, using 2)",
+  "rivers": "ok (42 named rivers in range, using 3)",
+  "coast": "ok (0 ways)",
+  "peaks": "ok (2 named peaks, 9 named ranges)"
+ },
+ "notes": [
+  "站点「果子沟大桥」压缩后会落在湖「赛里木湖」的湖面上，草稿里已把它挪到湖岸。",
+  "站点「赛里木湖」压缩后会落在湖「赛里木湖」的湖面上，草稿里已把它挪到湖岸。",
+  "有 2 个站点因为靠得太近被拉开了一些（伊宁机场 约 5、伊宁市 约 5，单位为盆景单位），方位基本不变。",
+  "山峰「4553 m peak」落在前排，已压低到 H≈20 免得挡住站点；构图时可考虑换到后排或删掉。",
+  "山峰「3975 m peak」落在前排，已压低到 H≈12 免得挡住站点；构图时可考虑换到后排或删掉。",
+  "山峰「3884 m peak」落在前排，已压低到 H≈11 免得挡住站点；构图时可考虑换到后排或删掉。"
+ ]
+}

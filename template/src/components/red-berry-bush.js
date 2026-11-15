@@ -1,0 +1,2 @@
+import {T,C,rod,ball,finish} from './paperkit.js';
+export function makeRedBerryBush(){const group=new T.Group();for(let i=0;i<7;i++){const a=i*2.4,h=.23+(i%3)*.09,x=Math.cos(a)*.15,z=Math.sin(a)*.12;rod(group,[0,0,0],[x,h,z],.009,C.brown);for(let j=0;j<3;j++){const bx=x+Math.sin(i+j)*.045,by=h-j*.045,bz=z+Math.cos(i+j)*.045;rod(group,[x,h-.09,z],[bx,by,bz],.005,C.brown);ball(group,[.022,.024,.022],[bx,by,bz],C.red);}}return finish(group);}
