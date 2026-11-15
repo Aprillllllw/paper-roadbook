@@ -186,7 +186,7 @@ def check_trip(trip, scene_stops, scene_routes, public_dir, rep):
     if not trip.get("title"):
         rep.err("trip.title", "缺少标题")
     if trip.get("lang") not in (None, "zh", "en"):
-        rep.warn("trip.lang", "应为 zh 或 en")
+        rep.warn("trip.lang", "模板自带 zh 和 en 两套界面文字；用其他语言时，请自己改 src/ui/shell.js 里的文字")
     if not trip.get("disclaimer"):
         rep.warn("trip.disclaimer", "页面需要显示「方位真实，距离已压缩」这类说明，请保留这个字段")
 
